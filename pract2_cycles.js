@@ -55,17 +55,17 @@ function getSubscriptionPrice(type) {
         credit = 0;
         console.log(`starter`, credit);
       return credit;
-      break;
+      // break;
       case "professional":
          credit = 20;
         console.log(`professional`, credit);
         return 20;
-      break;
+      // break;
       case "organization":
            credit = 50;
         console.log(`organization`, credit);
         return 50;
-      break;
+      // break;
     default:
       return "Invalid subscription type!";
   }
@@ -77,8 +77,39 @@ getSubscriptionPrice("organization");
 
 console.log("hello" && 5); // 5
 console.log(5 && "hello"); // "hello"
-console.log("mango" && "poly"); // "poly"
+console.log(false && "poly"); // false
+console.log( "poly" && false); // false
 console.log("poly" && "mango"); // "mango"
-
 console.log(false || null) // false || false = null
 console.log(null || false);  // false || false = false
+
+
+let count = 0;
+
+while (count <= 10) {
+  // console.log(`Count: ${count}`);
+  if (count === 4) {
+    console.log(`Count = ${count}`);
+    break;
+  }
+  count += 1;
+}
+
+// do {
+//   count = --count;
+//   console.log(`Count: ${count}`);
+// }
+//   while (count >= 1)
+
+
+function calculateEvenTotal(number) {
+  number = Math.floor(number / 2) * 2; // 8/2=4
+  let numberTestData = 0;
+  for (let i = 0; number >= i; i = i + 2) {
+    numberTestData = numberTestData + i;
+  }
+  return numberTestData;
+}
+// console.log(calculateEvenTotal(3));
+console.log(calculateEvenTotal(7));
+
